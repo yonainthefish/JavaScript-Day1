@@ -7,11 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+    <p></p>
+    <input type="text">
+    <button>Write Something!</button>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum et tenetur, ratione facilis quia ullam. Ducimus repellendus atque nemo possimus eligendi qui quis magni alias aliquam, ipsa quasi labore mollitia.</p>
+    <script>
+        const myBtn = document.querySelector("button");
+        const myP = document.querySelector("p");
+        const myInput = document.querySelector("input");
 
-    <!-- 외부 -->
-    <script src="test.js"></script>
+        myBtn.addEventListener('click', function(){
+            myP.textContent = myInput.value;
+        });
+
+        // input 요소에 'input' 이벤트를 연결하면 실시간으로 값이 반영되게 만들 수도 있습니다.
+        myInput.addEventListener('input', ()=>{
+        myP.textContent = myInput.value;
+        });
+
+        myP.innerHTML = "<strong>I'm Strong!!</strong>";
+    </script>
     
 </body>
 </html>
