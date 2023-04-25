@@ -29,3 +29,14 @@ for (let index = 0; index < 10; index++) {
     }
 }
 
+function range(num,min,max) {
+    // true 또는 false 로 반환
+    return num>min && num<max
+}
+
+
+for (let index = 0; index < 10; index++) {
+    if(range(index,2,4)){
+            console.log(index)
+    }
+}
