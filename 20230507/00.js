@@ -17,3 +17,15 @@ const asyncBlocking = () => {
 result('동기식 코드1');
 result(asyncBlocking());
 result('동기식 코드2');
+
+const num = 'abcde1abc12abb';
+
+let sum = 0;
+for (let i = 0; i < num.length; i++) {
+  const char = num.charAt(i);
+  if (!isNaN(char)) {
+    sum += parseInt(char, 10);
+  }
+}
+
+console.log(sum);
